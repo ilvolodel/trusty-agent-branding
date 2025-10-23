@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "trustypa": {
+      "url": "https://trustypa.brainaihub.tech/mcp",
+      "transport": {
+        "type": "sse"
+      },
+      "headers": {
+        "Authorization": "Bearer EP31xLyrqTRwMlksWwIfxIWFUNN4Ex_uL13z31e2TVQ"
+      }
+    }
+  }
+}
