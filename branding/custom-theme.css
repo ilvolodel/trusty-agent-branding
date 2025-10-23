@@ -1,0 +1,269 @@
+/* Trusty Agent - Custom White Theme with Tinexta InfoCert Colors */
+
+:root {
+  /* Tinexta InfoCert Brand Colors */
+  --infocert-blue: #0072CE;
+  --infocert-blue-dark: #005BA8;
+  --infocert-blue-light: #4DA3E8;
+  
+  /* Base Colors - WHITE THEME */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F8F9FA;
+  --bg-tertiary: #E9ECEF;
+  --bg-hover: #F1F3F5;
+  
+  /* Text Colors */
+  --text-primary: #212529;
+  --text-secondary: #495057;
+  --text-muted: #6C757D;
+  
+  /* Accent Colors */
+  --accent-primary: var(--infocert-blue);
+  --accent-hover: var(--infocert-blue-dark);
+  --accent-active: var(--infocert-blue-light);
+  
+  /* Borders */
+  --border-color: #DEE2E6;
+  --border-light: #E9ECEF;
+}
+
+/* Main background - WHITE */
+body {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+/* All major containers - WHITE */
+.workspace,
+.terminal,
+.chat-container,
+.sidebar,
+.editor,
+.panel,
+[class*="bg-"],
+[class*="background"] {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Secondary backgrounds */
+.card,
+.modal,
+.dropdown-menu {
+  background-color: var(--bg-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+/* Header customization */
+header,
+.header,
+[class*="header"] {
+  background-color: var(--bg-secondary) !important;
+  border-bottom: 2px solid var(--infocert-blue) !important;
+}
+
+/* Replace "OpenHands" text with "Trusty Agent" in header */
+header::before,
+.header::before,
+[class*="header"]::before {
+  content: "Trusty Agent";
+  font-weight: 600;
+  color: var(--infocert-blue);
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+/* Hide original logo/title if present */
+header img,
+.header img,
+[class*="header"] img {
+  display: none !important;
+}
+
+/* Buttons with InfoCert blue */
+button,
+.btn,
+[role="button"] {
+  background-color: var(--accent-primary) !important;
+  color: white !important;
+  border: none !important;
+  transition: background-color 0.2s ease !important;
+}
+
+button:hover,
+.btn:hover,
+[role="button"]:hover {
+  background-color: var(--accent-hover) !important;
+}
+
+button:active,
+.btn:active,
+[role="button"]:active {
+  background-color: var(--accent-active) !important;
+}
+
+/* Links */
+a {
+  color: var(--accent-primary) !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: var(--accent-hover) !important;
+  text-decoration: underline !important;
+}
+
+/* Input fields */
+input,
+textarea,
+select {
+  background-color: var(--bg-primary) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--accent-primary) !important;
+  outline: 2px solid var(--accent-primary) !important;
+  outline-offset: 2px !important;
+}
+
+/* Code editor */
+.monaco-editor,
+.editor-container {
+  background-color: var(--bg-secondary) !important;
+}
+
+/* Terminal */
+.terminal,
+.xterm,
+.xterm-screen {
+  background-color: var(--text-primary) !important;
+  color: #FFFFFF !important;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+}
+
+/* Sidebar */
+.sidebar,
+nav,
+[role="navigation"] {
+  background-color: var(--bg-secondary) !important;
+  border-right: 1px solid var(--border-color) !important;
+}
+
+/* Active/Selected states */
+.active,
+.selected,
+[aria-selected="true"] {
+  background-color: var(--accent-primary) !important;
+  color: white !important;
+}
+
+/* Hover states */
+.hover,
+[class*="hover"]:hover {
+  background-color: var(--bg-hover) !important;
+}
+
+/* Footer */
+footer,
+.footer,
+[class*="footer"] {
+  background-color: var(--bg-secondary) !important;
+  border-top: 1px solid var(--border-color) !important;
+  padding: 1rem !important;
+  text-align: center !important;
+  color: var(--text-secondary) !important;
+}
+
+footer::after,
+.footer::after,
+[class*="footer"]::after {
+  content: "Trusty Agent • Powered by Tinexta InfoCert";
+  display: block;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+/* Notifications/Toasts */
+.notification,
+.toast,
+.alert {
+  background-color: var(--bg-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+.notification.success,
+.toast.success,
+.alert.success {
+  border-left: 4px solid #28a745 !important;
+}
+
+.notification.error,
+.toast.error,
+.alert.error {
+  border-left: 4px solid #dc3545 !important;
+}
+
+.notification.info,
+.toast.info,
+.alert.info {
+  border-left: 4px solid var(--accent-primary) !important;
+}
+
+/* Tabs */
+.tab,
+[role="tab"] {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-bottom: none !important;
+}
+
+.tab.active,
+[role="tab"][aria-selected="true"] {
+  background-color: var(--bg-primary) !important;
+  color: var(--accent-primary) !important;
+  border-bottom: 2px solid var(--accent-primary) !important;
+}
+
+/* Loading indicators */
+.spinner,
+.loader,
+[class*="loading"] {
+  border-color: var(--accent-primary) !important;
+  border-top-color: transparent !important;
+}
+
+/* Ensure all text is readable on white background */
+* {
+  color: var(--text-primary);
+}
+
+/* Override any dark mode remnants */
+[data-theme="dark"],
+.dark-mode,
+.theme-dark {
+  display: none !important;
+}
